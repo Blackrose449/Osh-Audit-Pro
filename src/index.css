@@ -4,42 +4,129 @@
 
 @layer base {
   :root {
-    --brand-dark: #0B493D;
-    --brand-primary: #126B58;
-    --brand-light: #F8FAF9;
-    --brand-ink: #172B27;
-    --brand-border: #E2E8E5;
+    --brand-dark: #0b493d;
+    --brand-primary: #126b58;
+    --brand-light: #f8faf9;
+    --brand-ink: #172b27;
+    --brand-border: #e2e8e5;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
   }
   body {
     @apply bg-brand-light text-brand-ink antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family:
+      'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+      Arial, sans-serif;
     margin: 0;
+    background-image:
+      radial-gradient(circle at 12% 0%, rgba(18, 107, 88, 0.06), transparent 32rem),
+      radial-gradient(circle at 100% 0%, rgba(11, 73, 61, 0.04), transparent 28rem);
+    background-attachment: fixed;
   }
   #root {
     min-height: 100vh;
+  }
+  ::selection {
+    background: rgba(18, 107, 88, 0.18);
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #c8d6d2 transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: #c8d6d2;
+    border-radius: 999px;
   }
 }
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center rounded-button px-4 py-2 text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none;
+    @apply inline-flex items-center justify-center gap-2 rounded-button px-4 py-2 text-sm font-semibold transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:translate-y-px;
   }
   .btn-primary {
-    @apply btn bg-brand-primary text-white hover:bg-brand-dark;
+    @apply btn bg-brand-primary text-white shadow-sm hover:bg-brand-dark;
   }
   .btn-secondary {
-    @apply btn bg-white text-brand-ink border border-brand-border hover:bg-brand-light;
+    @apply btn border border-brand-border bg-white text-brand-ink hover:border-brand-primary/30 hover:bg-brand-light;
   }
   .btn-ghost {
     @apply btn text-brand-ink hover:bg-brand-light;
   }
   .card {
-    @apply rounded-card border border-brand-border bg-white p-4 shadow-sm;
+    @apply rounded-card border border-brand-border bg-white p-4 shadow-[0_1px_2px_rgba(15,45,38,0.04),0_8px_26px_rgba(15,45,38,0.05)];
   }
   .input {
-    @apply block w-full rounded-button border border-brand-border bg-white px-3 py-2 text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary;
+    @apply block w-full rounded-button border border-brand-border bg-white px-3 py-2 text-sm text-brand-ink placeholder:text-brand-ink/35 focus:border-brand-primary/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary/30;
   }
   .label {
-    @apply block text-xs font-semibold text-brand-ink/70 mb-1 tracking-wide uppercase;
+    @apply mb-1 block text-[11px] font-bold uppercase tracking-[0.08em] text-brand-ink/60;
+  }
+  .table-head {
+    @apply text-left text-[11px] font-bold uppercase tracking-[0.08em] text-brand-ink/50;
+  }
+  .row-hover {
+    @apply border-b border-brand-border/60 transition-colors hover:bg-brand-light/70;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fade-in 160ms ease-out;
+  }
+  .animate-slide-up {
+    animation: slide-up 200ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .animate-slide-in {
+    animation: slide-in 200ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .animate-pop {
+    animation: pop 180ms ease-out;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

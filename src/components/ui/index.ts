@@ -1,5 +1,11 @@
 export { Button } from './Button';
 export { Card } from './Card';
 export { Input } from './Input';
+export { Textarea, Select } from './Form';
 export { RiskBadge } from './RiskBadge';
+export { Modal } from './Modal';
+export { PageHeader } from './PageHeader';
+export { StatusPill } from './StatusPill';
+export { EmptyState } from './EmptyState';
+export { Avatar } from './Avatar';
 export { cn } from '@/lib/cn';

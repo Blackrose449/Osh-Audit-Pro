@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { AppLayout } from '@/components/layout/AppLayout';
+import { RequireAuth, PublicOnly } from '@/components/ProtectedRoute';
 import { Login } from '@/routes/auth/Login';
 import { Register } from '@/routes/auth/Register';
 import { ResetPassword } from '@/routes/auth/ResetPassword';
@@ -15,12 +16,17 @@ import { ReportSetup } from '@/routes/ReportSetup';
 import { Reports } from '@/routes/Reports';
 import { Actions } from '@/routes/Actions';
 import { Team } from '@/routes/Team';
+import { Profile } from '@/routes/Profile';
 import { NotFound, Forbidden, SessionExpired } from '@/routes/errors';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <AppLayout />,
+    element: (
+      <RequireAuth>
+        <AppLayout />
+      </RequireAuth>
+    ),
     children: [
       { index: true, element: <Dashboard /> },
       { path: 'companies', element: <Companies /> },
@@ -34,13 +40,35 @@ const router = createBrowserRouter([
       { path: 'reports', element: <Reports /> },
       { path: 'actions', element: <Actions /> },
       { path: 'team', element: <Team /> },
+      { path: 'profile', element: <Profile /> },
       { path: '403', element: <Forbidden /> },
       { path: 'session-expired', element: <SessionExpired /> },
     ],
   },
-  { path: '/login', element: <Login /> },
-  { path: '/register', element: <Register /> },
-  { path: '/reset-password', element: <ResetPassword /> },
+  {
+    path: '/login',
+    element: (
+      <PublicOnly>
+        <Login />
+      </PublicOnly>
+    ),
+  },
+  {
+    path: '/register',
+    element: (
+      <PublicOnly>
+        <Register />
+      </PublicOnly>
+    ),
+  },
+  {
+    path: '/reset-password',
+    element: (
+      <PublicOnly>
+        <ResetPassword />
+      </PublicOnly>
+    ),
+  },
   { path: '*', element: <NotFound /> },
 ]);
 
