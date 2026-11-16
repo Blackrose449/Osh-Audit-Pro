@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Illustration of a food production line hand-wash station">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef4f2"/>
+      <stop offset="1" stop-color="#d4e3df"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9d6d3"/>
+      <stop offset="1" stop-color="#8fa3a0"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" fill="url(#bg3)"/>
+  <rect y="300" width="640" height="180" fill="#b9cbc7"/>
+  <path d="M0 300h640" stroke="#96ada8" stroke-width="4"/>
+  <rect x="70" y="130" width="250" height="120" rx="10" fill="#ffffff" stroke="#b4c6c2" stroke-width="3"/>
+  <rect x="96" y="158" width="80" height="64" rx="6" fill="#dce9e6"/>
+  <rect x="196" y="166" width="100" height="10" rx="5" fill="#8fa3a0"/>
+  <rect x="196" y="190" width="100" height="10" rx="5" fill="#8fa3a0"/>
+  <path d="M196 250h120" stroke="#126b58" stroke-width="8" stroke-linecap="round"/>
+  <path d="M350 300v-70c0-20 16-36 36-36h100" fill="none" stroke="#7c938e" stroke-width="8" stroke-linecap="round"/>
+  <rect x="470" y="180" width="38" height="46" rx="8" fill="#9fb3af"/>
+  <path d="M489 226v18" stroke="#2f7770" stroke-width="8" stroke-linecap="round"/>
+  <rect x="430" y="270" width="130" height="30" rx="8" fill="#ffffff" stroke="#b4c6c2" stroke-width="2"/>
+  <circle cx="470" cy="332" r="20" fill="#dce9e6"/>
+  <text x="70" y="56" fill="#172b27" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="700">Kitchen Line 1</text>
+  <text x="70" y="84" fill="#4b635d" font-family="Inter, system-ui, sans-serif" font-size="16">Hand-wash station and packaging area</text>
+  <rect x="70" y="440" width="132" height="8" rx="4" fill="#ff0000"/>
+</svg>

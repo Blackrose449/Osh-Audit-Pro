@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Illustration of a cold storage control panel">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dff0f5"/>
+      <stop offset="1" stop-color="#b7d6e2"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e6f2f6"/>
+    </linearGradient>
+    <pattern id="frost" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="13" cy="13" r="1.6" fill="#ffffff" fill-opacity=".7"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="480" fill="url(#bg4)"/>
+  <rect width="640" height="480" fill="url(#frost)"/>
+  <rect x="120" y="80" width="400" height="290" rx="16" fill="url(#panel)" stroke="#98bcc9" stroke-width="4"/>
+  <rect x="150" y="112" width="340" height="120" rx="8" fill="#173b43"/>
+  <text x="176" y="160" fill="#7fe3c4" font-family="ui-monospace, monospace" font-size="30">-18.4 °C</text>
+  <text x="176" y="192" fill="#9fc7d1" font-family="ui-monospace, monospace" font-size="14">COLD ROOM 02 · STABLE</text>
+  <path d="M176 214h288" stroke="#2f6f7c" stroke-width="4" stroke-dasharray="8 8"/>
+  <circle cx="196" cy="276" r="18" fill="#00b050"/>
+  <circle cx="266" cy="276" r="18" fill="#00b050"/>
+  <circle cx="336" cy="276" r="18" fill="#ffd966"/>
+  <circle cx="406" cy="276" r="18" fill="#c5d8de"/>
+  <rect x="164" y="312" width="192" height="12" rx="6" fill="#c5d8de"/>
+  <rect x="164" y="334" width="120" height="12" rx="6" fill="#c5d8de"/>
+  <text x="120" y="416" fill="#173b43" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="700">Cold Storage Unit</text>
+  <text x="120" y="444" fill="#3f6470" font-family="Inter, system-ui, sans-serif" font-size="16">Temperature monitoring panel</text>
+</svg>

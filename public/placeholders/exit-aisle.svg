@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Illustration of an emergency exit aisle with a spill">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22302f"/>
+      <stop offset="1" stop-color="#0d1918"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b4d49"/>
+      <stop offset="1" stop-color="#243431"/>
+    </linearGradient>
+    <pattern id="tiles" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#ffffff" stroke-opacity=".05"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="480" fill="url(#bg2)"/>
+  <rect y="250" width="640" height="230" fill="url(#floor)"/>
+  <rect y="250" width="640" height="230" fill="url(#tiles)"/>
+  <rect x="250" y="70" width="140" height="200" rx="6" fill="#0f2622" stroke="#5d7771" stroke-width="3"/>
+  <rect x="266" y="86" width="108" height="168" rx="4" fill="#1c3530"/>
+  <circle cx="354" cy="170" r="6" fill="#9db8b2"/>
+  <path d="M282 220h76" stroke="#00b050" stroke-width="10"/>
+  <path d="M70 330h170l40 40H70z" fill="#f2f7f5" fill-opacity=".12"/>
+  <ellipse cx="430" cy="402" rx="110" ry="26" fill="#0a1211" fill-opacity=".65"/>
+  <ellipse cx="416" cy="396" rx="64" ry="14" fill="#ffd966" fill-opacity=".35"/>
+  <path d="M486 330l24 24m0-24l-24 24" stroke="#ffd966" stroke-width="6" stroke-linecap="round"/>
+  <text x="70" y="50" fill="#e8f3f0" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="700">Exit aisle</text>
+  <text x="70" y="78" fill="#9db8b2" font-family="Inter, system-ui, sans-serif" font-size="16">Spill reported near the emergency exit</text>
+  <rect x="70" y="440" width="132" height="8" rx="4" fill="#ffd966"/>
+</svg>
